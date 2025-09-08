@@ -72,12 +72,11 @@ body {
   color: darkgoldenrod
 }
 
-.photo-coffee-cup {
+.three-cups-of-coffee {
   grid-column: 2 / span 3;
   align-self: center;
   justify-self: center;
   padding: 20px;
-  border: 5px solid black;
   height: 400px;
   size: 50px
 }
@@ -118,13 +117,18 @@ body {
 
 .button3,
 .button4,
-.button5,
-.button6,
-.button7,
-.button8 {
+.button5 {
   width: 100%;
   background-color: #edcdbbc9;
   color: #b5835f
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 .button9,
@@ -135,7 +139,7 @@ body {
   background-color: #edcdbbc9;
   color: #b5835f;
 }
-
+/*
 .button3 {
 
   border: none;
@@ -146,8 +150,8 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 12px;
-}
-
+}*/
+/*
 .button4 {
 
   border: none;
@@ -158,8 +162,8 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 12px;
-}
-
+} */
+/*
 .button5 {
 
   border: none;
@@ -170,43 +174,7 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 12px;
-}
-
-.button6 {
-
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
-.button7 {
-
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
-.button8 {
-
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 12px;
-}
+}*/
 
 .button9 {
 
@@ -254,15 +222,6 @@ body {
   height: 100%;
 }
 
-.middle-buttons {
-  grid-area: button6 button7 button8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 250px;
-  margin-top: 30px;
-}
-
 .top-buttons {
   grid-area: button3 button4 button5;
   display: flex;
@@ -299,11 +258,9 @@ body {
 
   .content-header {
     font-size: 30px;
-    text-align: auto;
     text-wrap: wrap;
     margin: 0px;
-    padding: 0px;
-    flex-direction: wrap;
+    padding: 50px;
     grid-column: 1/1;
   }
 
@@ -319,15 +276,15 @@ body {
     size: 10px;
   }
 
-  .photo-coffee-cup {
+  .three-cups-of-coffee img {
     grid-column: 1/1;
-    width: 325px;
-    height: 340px;
+     width: 100%;
+    height: 100%;
   }
 
-  .photo-coffee-cup img {
-    width: 100%;
-    height: 100%;
+  .three-cups-of-coffee {
+    margin-top: 50px;
+    height: 200PX;
   }
 
   .content-buttons {
@@ -340,7 +297,7 @@ body {
 
   .homepage {
     padding: 0px;
-    padding: top 20px;
+    display: block;
   }
 }
 
@@ -370,7 +327,7 @@ body {
   .nav-links {
     display: flex;
     gap: 15px;
-    margin-left: 20px;
+    margin-left: 200px;
     cursor: pointer;
   }
 
@@ -395,6 +352,13 @@ body {
     width: 100%;
     height: 600px;
     padding: 0;
+  }
+
+.three-cups-of-coffee img {
+   width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
   }
 
   .content-header {
@@ -432,17 +396,13 @@ body {
   }
 
   .top-buttons,
-  .middle-buttons,
   .bottom-buttons {
     display: contents;
   }
 
   .button3,
   .button4,
-  .button5,
-  .button6,
-  .button7,
-  .button8 {
+  .button5 {
     width: 165px;
     font-size: 16px;
   }
@@ -450,9 +410,6 @@ body {
   .button3,
   .button4,
   .button5,
-  .button6,
-  .button7,
-  .button8,
   .button9,
   .button10,
   .button11 {
