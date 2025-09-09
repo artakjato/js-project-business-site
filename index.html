@@ -34,7 +34,7 @@
       </p>
     </span>
   </div>
-  
+
 
   <div class="homepage">
     <div>
@@ -70,7 +70,54 @@
         <img src="icon_img3.jpg" 
         alt="A profile picture">
       </p>
-    </div>
+    </div>    
+  </div>
+  
+  <div class="login">
+  <form action="http://httpbin.org/anything"            method="post">
+  <label> 
+      User email
+      <input 
+  type="email" 
+  name="email" 
+  placeholder="example@email.com"
+  required>
+  </label>
+
+  <label>
+      Username 
+      <input 
+  type="username" 
+  name="username" 
+  required>
+  </label>
+    
+  <label>
+    Password
+      <input 
+  type="password" 
+  name="password" 
+  required>
+  </label>
+
+  <label>
+    Retype Password
+    <input 
+  type="password" 
+  name="password" 
+  required>
+  </label>
+
+<label>Subscription type:<br>
+  <input type="radio" name="role" value="admin"> Free<br>
+  <input type="radio" name="role" value="user"> Premium<br>
+  <br>
+</label>
+
+    <button 
+    type="submit">Create Profile</button>
+  </form>
+
   </div>
 
   <span class="footer">
