@@ -3,13 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
   <title>FikaMatch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
@@ -37,14 +52,22 @@
 
 
   <div class="homepage">
-    <div>
-      <h1 class="content-header">Find someone to share a fika with</h1>
-      <h2 class="content-subheader">Meet locals over coffee and kannelbullar - casual, friendly, real.</h2>
-      <p class="button1">Create Profile</p>
-      <p class="button2">Browse Profiles</p>
-    </div>
-    <div class="three-cups-of-coffee">
-      <img src="img/more_coffee.jpg" alt="Three cups of coffee">
+    <div class="homepage-inner">
+      <div class="homepagePlaceholder">
+        <h1 class="content-header">Find someone to share a fika with</h1>
+        <h2 class="content-subheader">Meet locals over coffee and kannelbullar - casual, friendly, real.</h2>
+        <a
+          href="#signup"
+          class="button1"
+        >Create Profile</a>
+        <a class="button2">Browse Profiles</a>
+      </div>
+      <div class="coffeeImagePlaceholder">
+        <img
+          src="https://images.unsplash.com/photo-1543269865-4430f94492b9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="People drinking coffee"
+        >
+      </div>
     </div>
   </div>
 
@@ -57,46 +80,92 @@
     </div>
     <div class="bottom-buttons">
       <p class="button9">Profile1
-        <img src="img/icon_img1.jpg" alt="A profile picture">
+        <img
+          src="img/icon_img1.jpg"
+          alt="A profile picture"
+        >
       </p>
       <p class="button10">Profile2
-        <img src="img/icon_img2.jpg" alt="A profile picture">
+        <img
+          src="img/icon_img2.jpg"
+          alt="A profile picture"
+        >
       </p>
       <p class="button11">Profile3
-        <img src="img/icon_img3.jpg" alt="A profile picture">
+        <img
+          src="img/icon_img3.jpg"
+          alt="A profile picture"
+        >
       </p>
     </div>
   </div>
 
-  <div class="createProfile">
-    <form class="createProfileForm" action="http://httpbin.org/anything" method="post">
+  <div
+    id="signup"
+    class="createProfile"
+  >
+    <form
+      class="createProfileForm"
+      action="http://httpbin.org/anything"
+      method="post"
+    >
       <label>
         User email
-        <input type="email" name="email" placeholder="example@email.com" required>
+        <input
+          class="inputEmail"
+          type="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+        >
       </label>
 
       <label>
         Username
-        <input type="username" name="username" required>
+        <input
+          type="username"
+          name="username"
+          required
+        >
       </label>
 
       <label>
         Password
-        <input type="password" name="password" required>
+        <input
+          type="password"
+          name="password"
+          required
+        >
       </label>
 
       <label>
         Retype Password
-        <input type="password" name="password" required>
+        <input
+          type="password"
+          name="password"
+          required
+        >
       </label>
 
       <label>Subscription type:<br>
-        <input type="radio" name="role" value="admin"> Free<br>
-        <input type="radio" name="role" value="user"> Premium<br>
+        <input
+          type="radio"
+          name="role"
+          value="admin"
+        > Free<br>
+        <input
+          type="radio"
+          name="role"
+          value="user"
+        >
+        Premium<br>
         <br>
       </label>
 
-      <button class="submit" type="submit">Create Profile</button>
+      <button
+        class="submit"
+        type="submit"
+      >Create Profile</button>
     </form>
 
   </div>

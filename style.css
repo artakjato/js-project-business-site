@@ -1,3 +1,8 @@
+html {
+  /* This property makes the html page to scroll smoothly */
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: none;
@@ -15,7 +20,7 @@ body {
   max-height: 40px;
   position: sticky;
   top: 0;
-  color: #a56b42;
+  background-image: url("./img/foam_cool.jpg");
 }
 
 .logo {
@@ -37,46 +42,26 @@ body {
 }
 
 .homepage {
+  background-color: #edcdbbc9;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.homepage-inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  /* or your preferred max width */
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
   text-align: center;
   font-family: "Albert Sans";
-  background-color: #edcdbbc9;
-  height: 600px;
-  gap: 20px;
-  padding: 10px 100px;
-  border: #edcdbbc9;
-}
-
-input {
-  font-size: 16px;
-}
-
-input:valid {
-  background-color: #664732;
-}
-
-input:invalid {
-  /*background-color: darkgoldenrod;*/
-}
-
-.createProfile {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-  color: #664732;
-  text-align: center;
-  background-color:#edcdbbc9;
-}
-
-.createProfileForm {
-  margin: 0 auto;
-  width: 250px;
-  border-style:groove;
-  background-color:darkgoldenrod
 }
 
 .submit .content-header {
@@ -95,19 +80,23 @@ input:invalid {
   color: darkgoldenrod
 }
 
-.three-cups-of-coffee {
+.homepagePlaceholder {
+  align-self: center;
+}
+
+.coffeeImagePlaceholder {
   grid-column: 2 / span 3;
   align-self: center;
   justify-self: center;
   padding: 20px;
   height: 400px;
-  size: 50px
+  size: 50px;
 }
 
-.three-cups-of-coffee img {
+.coffeeImagePlaceholder img {
   height: 100%;
   width: 100%;
-  padding: 40px;
+  border-radius: 15px;
 }
 
 .button1,
@@ -155,6 +144,13 @@ input:invalid {
   border-radius: 12px;
 }
 
+/*hover effect on buttons*/
+.button3:hover,
+.button4:hover,
+.button5:hover {
+  background-color: #84624d;
+}
+
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -189,6 +185,94 @@ input:invalid {
   height: 100%;
 }
 
+/*signup Form Start*/
+input {
+  font-size: 16px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #bda18a;
+  /* soft warm border */
+  border-radius: 8px;
+  /* rounded corners */
+  background-color: #fff;
+  /* keep text fields clear */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
+  transition: all 0.3s ease;
+  /* smooth focus transition */
+}
+
+input:valid {
+  box-shadow: 0 0 6px rgba(102, 71, 50, 0.6);
+  outline: none;
+  /* remove default outline */
+}
+
+input:invalid {
+  /*background-color: darkgoldenrod;*/
+}
+
+input:focus {
+  box-shadow: 3px 3px 4px rgba(115, 58, 0, 0.993);
+}
+
+.createProfile {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: #664732;
+  text-align: center;
+  background-image: url("./img/foam_cool.jpg");
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.createProfileForm {
+  margin: 0 auto;
+  width: 250px;
+  background-color: #EDCDBB;
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 12px;
+  /* softer box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button,
+input[type="submit"] {
+  background-color: #664732;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  /* rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #84624d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  /* subtle lift */
+}
+
+button:active,
+input[type="submit"]:active {
+  transform: translateY(0);
+  /* reset lift */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*signup Form End*/
+
 .footer {
   display: flex;
   justify-content: center;
@@ -203,7 +287,7 @@ input:invalid {
   color: white;
 }
 
-@media(min-width: 0px) and (max-width: 667px) {
+@media (min-width: 0px) and (max-width: 667px) {
   .nav-links {
     display: none;
   }
@@ -234,19 +318,18 @@ input:invalid {
     size: 10px;
   }
 
-  .three-cups-of-coffee img {
-    grid-column: 1/1;
+  .coffeeImagePlaceholder img {
     width: 200px;
     height: 150px;
   }
 
-  .three-cups-of-coffee {
+  .coffeeImagePlaceholder {
     margin-top: 50px;
-    height: 200PX;
+    height: 200px;
   }
 
   .content-buttons {
-    display: none
+    display: none;
   }
 
   .footer {
@@ -255,7 +338,17 @@ input:invalid {
 
   .homepage {
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+
+  .homepage-inner {
     display: block;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
   }
 }
 
@@ -299,21 +392,31 @@ input:invalid {
   }
 
   .homepage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
     background-color: #EDCDBB;
-    width: 100%;
-    height: 600px;
-    padding: 0;
   }
 
-  .three-cups-of-coffee {
+  .homepage-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .coffeeImagePlaceholder {
     height: auto;
   }
 
-  .three-cups-of-coffee img {
+  .coffeeImagePlaceholder img {
     width: 100%;
     height: 260px;
     background-repeat: no-repeat;
@@ -323,16 +426,17 @@ input:invalid {
   .content-header {
     font-size: 38px;
     font-weight: bolder;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 2;
     padding: 20px;
-    grid-column: 1/2;
+    color: #664732;
   }
 
   .content-subheader {
     font-size: 24px;
     font-style: italic;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 2;
     padding: 40px;
+    color: darkgoldenrod;
   }
 
   .button1,
