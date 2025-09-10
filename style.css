@@ -60,16 +60,26 @@ input:invalid {
   /*background-color: darkgoldenrod;*/
 }
 
-label {
-  display: block;
+.createProfile {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 5px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   color: #664732;
-
+  text-align: center;
+  background-color:#edcdbbc9;
 }
 
-.content-header {
+.createProfileForm {
+  margin: 0 auto;
+  width: 250px;
+  border-style:groove;
+  background-color:darkgoldenrod
+}
+
+.submit .content-header {
   font-size: 60px;
   font-weight: bolder;
   grid-column: 1 / span 4;
@@ -97,7 +107,7 @@ label {
 .three-cups-of-coffee img {
   height: 100%;
   width: 100%;
-  padding:40px;
+  padding: 40px;
 }
 
 .button1,
@@ -116,7 +126,7 @@ label {
 }
 
 .content-buttons {
-  grid-template-areas: 
+  grid-template-areas:
     "button3 button4 button5"
     "button9 button10 buton11";
   grid-template-columns: 3fr 3fr 3fr;

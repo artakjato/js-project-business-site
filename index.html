@@ -43,11 +43,9 @@
       <p class="button1">Create Profile</p>
       <p class="button2">Browse Profiles</p>
     </div>
-    <div 
-      class="three-cups-of-coffee">
-      <img src="more_coffee.jpg" 
-      alt="Three cups of coffee">
-  </div>
+    <div class="three-cups-of-coffee">
+      <img src="img/more_coffee.jpg" alt="Three cups of coffee">
+    </div>
   </div>
 
 
@@ -59,64 +57,47 @@
     </div>
     <div class="bottom-buttons">
       <p class="button9">Profile1
-        <img src="icon_img1.jpg" 
-        alt="A profile picture">
+        <img src="img/icon_img1.jpg" alt="A profile picture">
       </p>
       <p class="button10">Profile2
-        <img src="icon_img2.jpg"
-         alt="A profile picture">
+        <img src="img/icon_img2.jpg" alt="A profile picture">
       </p>
       <p class="button11">Profile3
-        <img src="icon_img3.jpg" 
-        alt="A profile picture">
+        <img src="img/icon_img3.jpg" alt="A profile picture">
       </p>
-    </div>    
+    </div>
   </div>
-  
-  <div class="login">
-  <form action="http://httpbin.org/anything"            method="post">
-  <label> 
-      User email
-      <input 
-  type="email" 
-  name="email" 
-  placeholder="example@email.com"
-  required>
-  </label>
 
-  <label>
-      Username 
-      <input 
-  type="username" 
-  name="username" 
-  required>
-  </label>
-    
-  <label>
-    Password
-      <input 
-  type="password" 
-  name="password" 
-  required>
-  </label>
+  <div class="createProfile">
+    <form class="createProfileForm" action="http://httpbin.org/anything" method="post">
+      <label>
+        User email
+        <input type="email" name="email" placeholder="example@email.com" required>
+      </label>
 
-  <label>
-    Retype Password
-    <input 
-  type="password" 
-  name="password" 
-  required>
-  </label>
+      <label>
+        Username
+        <input type="username" name="username" required>
+      </label>
 
-<label>Subscription type:<br>
-  <input type="radio" name="role" value="admin"> Free<br>
-  <input type="radio" name="role" value="user"> Premium<br>
-  <br>
-</label>
+      <label>
+        Password
+        <input type="password" name="password" required>
+      </label>
 
-    <button 
-    type="submit">Create Profile</button>
-  </form>
+      <label>
+        Retype Password
+        <input type="password" name="password" required>
+      </label>
+
+      <label>Subscription type:<br>
+        <input type="radio" name="role" value="admin"> Free<br>
+        <input type="radio" name="role" value="user"> Premium<br>
+        <br>
+      </label>
+
+      <button class="submit" type="submit">Create Profile</button>
+    </form>
 
   </div>
 
