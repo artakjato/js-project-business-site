@@ -6,177 +6,251 @@
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+  />
   <link
     rel="stylesheet"
     href="style.css"
-  >
+  />
   <title>FikaMatch</title>
 
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
-  >
+  />
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin
-  >
+  />
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-   
-  >
+  />
 </head>
 
 <body>
-
-  <div class="navigation-bar">
-    <p class="logo">
-      <span style='font-size:30px;'>&#9749;</span>
-      FikaMatch
-    </p>
-    <span class="nav-links">
-      <p>
-        Home
-      </p>
-      <p>
-        Events
-      </p>
-      <p>
-        Blog
-      </p>
-      <p>
-        Login
-      </p>
-    </span>
-  </div>
-
-
-  <div class="homepage">
-    <div class="homepage-inner">
-      <div class="homepagePlaceholder">
-        <h1 class="content-header">Find someone to share a fika with</h1>
-        <h2 class="content-subheader">Meet locals over coffee and kannelbullar - casual, friendly, real.</h2>
-        <a
-          href="#signup"
-          class="button1"
-        >Create Profile</a>
-        <a class="button2">Browse Profiles</a>
-    </div>
-      <div class="coffeeImagePlaceholder">
-        <img
-          src="https://images.unsplash.com/photo-1543269865-4430f94492b9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="People drinking coffee"
-        >
-      </div>
-    </div>
-  </div>
-
-
-  <div class="content-buttons">
-    <div class="top-buttons">
-      <p class="button3">Verified by BankId</p>
-      <p class="button4">Fika Events</p>
-      <p class="button5">Local Cafes Near You</p>
-    </div>
-    <div class="bottom-buttons">
-        <p class="button9">Profile1
-        <img
-          src="img/icon_img1.jpg"
-          alt="A profile picture"
-        >
-      </p>
-      <p class="button10">Profile2
-        <img
-          src="img/icon_img2.jpg"
-          alt="A profile picture"
-        >
-      </p>
-      <p class="button11">Profile3
-        <img
-          src="img/icon_img3.jpg"
-          alt="A profile picture"
-        >
-      </p>
-    </div>
-  </div>
-
-  <div
-    id="signup"
-    class="createProfile"
-  >
-    <form
-      class="createProfileForm"
-      action="http://httpbin.org/anything"
-      method="post"
+  <!--Video fading when opening the page-->
+  <div id="video-intro-container">
+    <video
+      autoplay
+      muted
+      playsinline
+      loop
     >
-      <label>
-        User email
-        <input
-          class="inputEmail"
-          type="email"
-          name="email"
-          placeholder="example@email.com"
-          required
-        >
-      </label>
-
-      <label>
-        Username
-        <input
-          type="username"
-          name="username"
-          required
-        >
-      </label>
-
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          required
-        >
-      </label>
-
-      <label>
-        Retype Password
-        <input
-          type="password"
-          name="password"
-          required
-        >
-      </label>
-
-      <label>Subscription type:<br>
-        <input
-          type="radio"
-          name="role"
-          value="admin"
-        > Free<br>
-        <input
-          type="radio"
-          name="role"
-          value="user"
-        >
-        Premium<br>
-        <br>
-      </label>
-
-      <button
-        class="submit"
-        type="submit"
-      >Create Profile</button>
-    </form>
-
+      <source
+        src="img/fikamatch.mp4"
+        type="video/mp4"
+      />
+    </video>
   </div>
 
-  <span class="footer">
-    </p>Made by Arta K.</p>
-  </span>
+  <!--Navigation bar-->
+  <main id="main content">
+    <nav class="navigation-bar">
+      <a
+        href="#"
+        class="logo"
+      >
+        <svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="50px"
+						height="50px"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<style>
+							@keyframes steam-rise {
+								0% {
+									transform: translateY(0);
+									opacity: 1;
+								}
+								100% {
+									transform: translateY(-8px);
+									opacity: 0; 
+								}
+							}
+							.steam1 {
+								animation: name duration timing-function iteration-count;
+								animation: steam-rise 2s linear infinite;
+							}
+							.steam2 {
+								animation: steam-rise 2s linear infinite;
+								animation-delay: 0.7s;
+							}
+							.steam3 {
+								animation: steam-rise 2s linear infinite;
+								animation-delay: 1.4s;
+							}
+						</style>
 
+						<path class="steam1" d="M10 2v2" />
+						<path class="steam2" d="M14 2v2" />
+						<path class="steam3" d="M6 2v2" />
 
+						<path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+					</svg>
+        FikaMatch
+      </a>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Blog</a>
+        <a
+          class="login-nav"
+          href="#signup"
+        >Login</a>
+      </div>
+    </nav>
+    <!--Homepage content-->
+    <header class="homepage">
+      <div class="homepage-inner">
+        <div class="homepage-content">
+          <h1 class="content-header">Find someone to share a fika with</h1>
+          <h2 class="content-subheader">Meet locals over coffee and kanelbullar - casual, friendly, real.</h2>
+
+          <div class="header-buttons">
+            <a
+              href="#signup"
+              class="button-primary"
+            >Create Profile</a>
+            <a
+              href="#"
+              class="button-browse"
+            >Browse Profiles</a>
+          </div>
+        </div>
+        <div class="coffee-image-placeholder">
+          <img
+            src="https://images.unsplash.com/photo-1543269865-4430f94492b9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="People enjoying coffee together"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!--Middle page section-->
+    <section class="features-section">
+      <div class="feature-item">
+        <h3>Verified by BankId</h3>
+        <p>Safety and trust are our top priorities. All profiles are verified for a secure experience.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Fika Events</h3>
+        <p>Join group events at local cafes. It's a great way to meet multiple new people at once.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Local Cafes Near You</h3>
+        <p>Discover new spots and get discounts at our partner cafes when you meet your match.</p>
+      </div>
+    </section>
+
+    <!--Profile Cards-->
+    <section class="profiles-preview">
+      <h2>Featured Profiles</h2>
+      <div class="profile-cards">
+        <div class="profile-card">
+          <img
+            src="img/icon_img1.jpg"
+            alt="Woman with dark hair in a messy bun wearing a white shirt standing against a plain light background, neutral expression"
+          />
+          <h4>Emma, 32</h4>
+        </div>
+        <div class="profile-card">
+          <img
+            src="img/icon_img2.jpg"
+            alt="Black pug wearing a light blue shirt looking directly at the camera with wide eyes, neutral background, expression appears curious and slightly anxious"
+          />
+          <h4>Doggy, 2</h4>
+        </div>
+        <div class="profile-card">
+          <img
+            src="img/icon_img3.jpg"
+            alt="Man with light hair styled back wearing a navy shirt with white polka dots standing outdoors against a plain light background, neutral expression, calm and relaxed atmosphere"
+          />
+          <h4>Max, 29</h4>
+        </div>
+      </div>
+    </section>
+
+    <!--Signup Form-->
+    <section
+      id="signup"
+      class="create-profile-section"
+    >
+      <div class="create-profile-container">
+        <h2>Join FikaMatch Today</h2>
+        <form
+          class="create-profile-form"
+          action="http://httpbin.org/anything"
+          method="post"
+        >
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+
+          <label for="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            name="username"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+          />
+
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            id="confirm-password"
+            type="password"
+            name="confirm_password"
+            required
+          />
+
+          <p class="subscription-label">Subscription Type:</p>
+          <div class="radio-group">
+            <label><input
+                type="radio"
+                name="subscription"
+                value="free"
+                checked
+              /> Free</label>
+            <label><input
+                type="radio"
+                name="subscription"
+                value="premium"
+              /> Premium</label>
+          </div>
+
+          <button
+            type="submit"
+            class="submit-button"
+          >Create profile</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+      </p>Made by Arta K.</p>
+    </footer>
+
+  </main>
 </body>
 
 </html>
